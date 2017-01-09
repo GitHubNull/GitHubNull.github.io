@@ -1,4 +1,0 @@
-theme: jekyll-theme-cayman
-name: 一线穿秋
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
