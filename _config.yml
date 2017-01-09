@@ -1,13 +1,13 @@
 # Setup
-title:        Project or Site name
-tagline:      A responsive theme for your project on GitHub Pages
+title:        一叶知秋
+tagline:      如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。
 baseurl:      ""
 paginate:     1
 
 # About/contact
 author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+  name:       饮酒梦破
+  url:        https://githubnull.github.io/
 
 # Gems
 gems:
