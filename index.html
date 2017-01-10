@@ -1,13 +1,18 @@
 ---
 layout: default
-title: {{ site.name }}
 ---
 
-<div id="home">
-  <h1>新世界，新梦想</h1>
-  <ul class="posts">
+<div id="container" class="cols">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+    <div class="box" style="background-color:#{{post.color}}">
+       {% if post.img %}
+          <img class="feat-image" src={{ "/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
+       {% endif %}
+          <div class="container">
+            <h4>{{post.title}}</h4>
+            <p>{{post.description}}</p>
+             <div class="action">{{ post.date | date: '%B %d, %Y' }}<a href="{{post.url | prepend: site.baseurl}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
+        </div>   
+    </div>
+   {% endfor %}
 </div>
