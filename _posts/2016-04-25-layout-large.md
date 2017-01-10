@@ -9,7 +9,7 @@ categories: [one, two]
 color: f44336
 author: webjeda
 permalink: /large/
-width: large
+width: small
 ---
 There are 3 types of layouts available for posts and pages. A page can be set to large width by adding front matter ``large`` as shown.
 
