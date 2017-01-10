@@ -1,6 +1,6 @@
 // The rotating sun in the logo
 .fa.fa-sun-o {
-    color: #ea6111;
+    color: #ea61ff;
 -webkit-animation-name: spin;
     -webkit-animation-duration: 9000ms;
     -webkit-animation-iteration-count: infinite;
@@ -39,6 +39,6 @@
     }
     }
     &:hover{
-        color: #eae311;
+        color: #eae3ff;
     }
 }
