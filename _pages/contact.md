@@ -59,15 +59,15 @@ Also, if you are willing to add it yourself then feel free to open a pull reques
 <form id="contact-form" class="form" action="https://getsimpleform.com/messages?form_api_token={{site.api-token}}" method="POST" enctype="multipart/form-data">
         <ul class="contact-ul">
             <li class="contact-li">
-                <label class="contact-label" for="name">Name:</label>
+                <label class="contact-label" for="name">姓名:</label>
                 <input type="text" placeholder="Your name" id="name" class="contact-input" name="name" tabindex="1"/>
             </li>
             <li class="contact-li">
-                <label class="contact-label" for="email">Email:</label>
+                <label class="contact-label" for="email">电子邮箱:</label>
                 <input type="email" placeholder="Your email" id="email" class="contact-input" name="email" tabindex="2"/>
             </li>
             <li class="contact-li">
-                <label class="contact-label" for="message">Message:</label>
+                <label class="contact-label" for="message">信息:</label>
                 <textarea class="contact-textarea" placeholder="Your message" class="contact-input" rows="4" id="message" name="message" tabindex="3"></textarea>
             </li>
             
