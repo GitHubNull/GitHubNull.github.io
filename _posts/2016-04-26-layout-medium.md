@@ -11,16 +11,3 @@ author: webjeda
 permalink: /medium/
 width: medium
 ---
-There are 3 types of layouts available for posts and pages. A page can be set to medium width by adding front matter ``medium`` as shown.
-
-{% highlight yml %}
----
-layout: post
-title:  "Medium Layout"
-width: medium
----
-{% endhighlight %}
-
-The page width will be 800px.
-
-*This option is only available on full version.

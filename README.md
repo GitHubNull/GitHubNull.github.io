@@ -1,44 +1,23 @@
 Demo: [http://webjeda.com/karna](http://webjeda.com/karna)
 
-# Installation: 
-Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
+#_menu.scss
+设置左侧的菜单栏的样式
 
-Watch my video on instlallation
-<iframe class="video" src="https://www.youtube.com/embed/T2nx6tj-ZH4?rel=0?rel=0" frameborder="0" allowfullscreen></iframe>
+#default.html
+设置默认页面的样式模板
 
-## How to delete old **gh-pages** branch?
-After forking the repository, click on **branches**.
-
-![delete gh-pages branch](http://blog.webjeda.com/images/delete-github-branch.png)
-
-Delete ``gh-pages`` branch.
-![delete gh-pages branch](http://blog.webjeda.com/images/delete-github-branch-2.png)
-
-You have to create a new ``gh-pages`` branch using the master branch. Go back to the forked repository and create ``gh-pages`` branch.
-
-![create gh-pages branch](http://blog.webjeda.com/images/create-gh-pages-branch.JPG)
-
-Now, go to settings and check the **Github Pages** section. You should see a URL where the blog is hosted.
-
-This process will host the theme as a **Project Page**. You can also download the files for local development. 
-
-The default theme will look like this
-
-![webjeda karna jekyll theme](/images/karna-jekyll-theme-screenshot.png)
+#_style.scss
+设置常见的样式属性（包括网站标题栏的属性header，header-title，header-tagline）等等
 
 
+#head.html
+是html静态页面的 head 模块，应该把网站标题的图标设置放在这里
 
-A sample post would look like this
+#menu-link.html
+设置左侧菜单栏的子选项以及菜单的标题
 
-![webjeda karna jekyll theme sidebar](/images/post.png)
-
-
-This theme is made especially for smartphones.
-
-![webjeda karna responsive jekyll theme](/images/karna-responsive-jekyll-theme.png)
-
-# Development
-Make changes to the **master** branch and create a pull request. Do not use **gh-pages** branch as it is used to host the theme.
+#note
+记嘚上传到github的时候更正 baseurl 的值
 
 # License
 MIT License

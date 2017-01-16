@@ -59,27 +59,31 @@ Also, if you are willing to add it yourself then feel free to open a pull reques
 <form id="contact-form" class="form" action="https://getsimpleform.com/messages?form_api_token={{site.api-token}}" method="POST" enctype="multipart/form-data">
         <ul class="contact-ul">
             <li class="contact-li">
-                <label class="contact-label" for="name">姓名:</label>
+                <label class="contact-label" for="name">Name:</label>
                 <input type="text" placeholder="Your name" id="name" class="contact-input" name="name" tabindex="1"/>
             </li>
             <li class="contact-li">
-                <label class="contact-label" for="email">电子邮箱:</label>
+                <label class="contact-label" for="email">Email:</label>
                 <input type="email" placeholder="Your email" id="email" class="contact-input" name="email" tabindex="2"/>
             </li>
             <li class="contact-li">
-                <label class="contact-label" for="message">信息:</label>
+                <label class="contact-label" for="message">Message:</label>
                 <textarea class="contact-textarea" placeholder="Your message" class="contact-input" rows="4" id="message" name="message" tabindex="3"></textarea>
             </li>
             
         </ul>
-        <ul>
-            <li>
-                 <input type="submit" value="发送" id="submit"/>
-                <input type="hidden" name='redirect_to' value="https://github.com/GitHubNull/" />
-            </li>
-        </ul>
+        <input type="submit" value="Send" id="submit"/>
+        <input type="hidden" name='redirect_to' value="http://blog.webjeda.com/thank-you/" />
         
 </form>
+
+This form is setup using [SimpleForm](https://getsimpleform.com){: target="_blank" rel="nofollow"}. You can get your own API token and update it in the **_config.yml** file.
+
+But remember, php forms will not work on Jekyll.
+
+More about jekyll forms here: [https://blog.webjeda.com/jekyll-subscribe-form/](https://blog.webjeda.com/jekyll-subscribe-form/)
+
+The styles for the form is included in this page. I haven't included it in the main css because the form has at least 25 lines of css and it is used only on this page. So including it in main css file doesn't make sense.
 
 
 <div id="fb-root"></div>

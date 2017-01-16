@@ -1,11 +1,11 @@
 
-title: 一叶之秋
-desctiption: 如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音
-url: https://githubnull.github.io
+title: 冷夜暗灯
+desctiption: 夜冷，灯暗。等谁说。
+url: http://githubnull.github.io/
 permalink: ':title/'
 
 markdown: kramdown
-baseurl: ""
+baseurl: "/rl"
 
 
 sass:
@@ -31,7 +31,7 @@ highlight: rouge
 analytics: UA-83979019-1
 
 # Comments
-disqus-shortname: Doit
+disqus-shortname: webjeda-demo
 
 # Contact form
 # Go to https://getsimpleform.com and get a API token by signing up with your email and enter that here
@@ -41,3 +41,9 @@ include: [_pages]
 version: 0.8
 
 gems: [jekyll-paginate, jekyll-seo-tag]
+
+# favicon.ico
+favicon: favicon.ico
+
+#site logo
+logo:  logo.png

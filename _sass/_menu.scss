@@ -7,7 +7,7 @@
     opacity: 0.95;
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: #000; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s;
@@ -19,14 +19,14 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #fff;
     display: block;
     transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #e11;
 }
 
 /* Position and style the close button (top right corner) */
@@ -51,7 +51,7 @@
     .sidenav a {font-size: 18px;}
 }
 #slid {
-    color: #eee;
+    color: #fff;
     position: fixed;
     top: 0px;
     left: 0;
