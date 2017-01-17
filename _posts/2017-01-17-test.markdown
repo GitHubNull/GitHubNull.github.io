@@ -4,10 +4,10 @@ title:
 description: 
 date: 2017-01-17 13:40:17
 categories: page post
-img: cool_night.jpeg
+img: cool_night.jpg
 categories: test
 color: 006400
-author: webjeda
+author: 冷夜暗灯
 permalink: /large/
 width: small
 ---
