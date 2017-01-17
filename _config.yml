@@ -5,7 +5,7 @@ url: http://githubnull.github.io/
 permalink: ':title'
 
 markdown: kramdown
-baseurl: "http://githubnull.github.io"
+baseurl: "githubnull.github.io"
 
 
 sass:
