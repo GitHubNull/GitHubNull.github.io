@@ -1,11 +1,11 @@
 
 title: 冷夜暗灯
 desctiption: 夜冷，灯暗。等谁说。
-url: http://githubnull.github.io
+url:githubnull.github.io
 permalink: ':title'
 
 markdown: kramdown
-baseurl: "githubnull.github.io"
+baseurl: /githubnull.github.io
 
 
 sass:
