@@ -1,7 +1,7 @@
 
 title: 冷夜暗灯
 desctiption: 夜冷，灯暗。等谁说。
-url:https://githubnull.github.io
+url: "https://githubnull.github.io/"
 permalink: ':title'
 
 markdown: kramdown
