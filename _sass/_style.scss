@@ -158,8 +158,9 @@ header {
     background-image: url(../images/watch.jpg);
     background-repeat:no-repeat;
     min-height: 100px;
-    max-width:900px;
-    //min-width:900px;
+    //max-width:900px;
+    min-width:900px;
+    align: center;
     text-align: center;
     margin: 2em 0;
 }
