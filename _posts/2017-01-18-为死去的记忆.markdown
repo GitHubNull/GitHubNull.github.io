@@ -4,9 +4,9 @@ title: 为死去的记忆
 description:   死去的记忆，我们的生命，不再复燃。。。
 date: 2017-01-18 23:57:50  
 categories: page post  
-img: IMG20161113094224.jpg  
+img: image-1.jpg  
 categories: 思想  
-color: FF8C00  
+color: 7d26cd      
 author: RL  
 permalink: /死去的记忆/  
 width: large
