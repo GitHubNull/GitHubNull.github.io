@@ -1,14 +1,9 @@
----  
+---
 layout: post  
-title:今天回来了  
-description:   回家了  
-date: 2017-01-20 22:36:14  
-categories: page post  
-img:  
-categories: 思想  
-color: f44336  
-author: RL  
-permalink: /large/
-width: small  
----  
+title:今天回来了
+description:回家了
+date: 2017-01-20 22:36:14
+color: f44336
+author:RL
+---
 今天，回家了。
