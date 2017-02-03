@@ -1,11 +1,11 @@
----
+---  
 layout: post  
 title:"今天回来了"
 description:回家了
 date: 2017-01-20 22:36:14
 color: f44336
 author:RL
----
+---  
 今天，回家了。  
 
 Morbi vestibulum sem eget maximus feugiat. Curabitur vehicula magna in molestie dignissim. Nam gravida leo non purus cursus, id accumsan justo tincidunt. Donec accumsan purus mauris, vitae luctus magna faucibus vitae. Nullam tincidunt urna scelerisque, hendrerit mi ac, sagittis ligula. Curabitur convallis eros eu fringilla maximus. Donec lobortis scelerisque enim eu molestie. Duis ac mi quis risus auctor vulputate.
