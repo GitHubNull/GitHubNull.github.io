@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "烟雨"
+description: 青烟似梦随流水	灵语如夜伴长天
 date:  2017-02-05 18:22:12
 categories: 诗歌
 img: qingyan.jpg
