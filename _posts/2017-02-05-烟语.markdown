@@ -11,11 +11,11 @@ author: 夜雨
 
 >青烟似梦随流水  
 >灵语如夜伴长天  
----  
- 
-![梦]({{site.url}}/images/life_game.jpeg)
 
-梦
+---  
+![梦]({{site.url}}/images/life_game.jpeg)  
+
+梦  
 
 似真非真一壶镜	醉眼迷离飞似蝶  
 欲望秋水心飘然	醒来万事空头转  
@@ -26,7 +26,7 @@ author: 夜雨
 
 ---    
 
-![夏]({{site.url}}/images/xiatian.jpeg)
+![夏]({{site.url}}/images/xiatian.jpeg)  
 
 夏
 
@@ -36,7 +36,7 @@ author: 夜雨
 
 ---   
 
-![相思苦]({{site.url}}/images/image-1.jpg)
+![相思苦]({{site.url}}/images/image-1.jpg)  
 
 ---  
 
