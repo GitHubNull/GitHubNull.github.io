@@ -9,12 +9,10 @@ color: '006666'
 author: 夜雨
 ---
 
->青烟似梦随流水  
+>青烟似梦随流水
 >灵语如夜伴长天
 ---
 ---
-<p style="text-align: center;">
-	<pre>
 ---
 ![梦]({{site.url}}/images/timg.jpeg)
 		梦
@@ -259,5 +257,3 @@ author: 夜雨
 		柳枝不解风情
 		只道风意错付
 ---		
-	</pre>
-</p>
