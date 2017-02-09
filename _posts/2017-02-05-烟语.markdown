@@ -39,8 +39,6 @@ author: 夜雨
 
 ![相思苦]({{site.url}}/images/image-1.jpg)  
 
----  
-
 相思苦  
 
 愁肠断  
