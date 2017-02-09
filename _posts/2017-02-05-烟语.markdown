@@ -13,7 +13,7 @@ author: 夜雨
 >灵语如夜伴长天
 ---  
  
-![梦]({{site.url}}/images/timg.jpeg)
+![梦]({{site.url}}/images/life_game.jpeg)
 
 ---
 
@@ -30,7 +30,7 @@ author: 夜雨
 
 ---    
 
-![梦]({{site.url}}/images/timg-２.jpeg)
+![梦]({{site.url}}/images/xiatian.jpeg)
 
 <pre>
 		　夏
