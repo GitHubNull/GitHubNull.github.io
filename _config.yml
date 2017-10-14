@@ -3,7 +3,7 @@ title: 空
 email: 641570479@qq.com
 description: 空.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "https://githubnull.github.io" # the base hostname & protocol for your site
 google_analytics: "UA-83979019-1"
 
 # User Settings
@@ -13,7 +13,7 @@ disqus_username: 空
 
 # Social Media
 # Remove the item if you don't need it
-github_username: github_username
+github_username: githubnull
 
 # Build settings
 markdown: kramdown
