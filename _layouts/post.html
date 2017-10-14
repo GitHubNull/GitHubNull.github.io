@@ -17,6 +17,10 @@
                     {% endif %}
                     <svg id="clock" class="icon-clock"><use xlink:href="#icon-clock"></use></svg>
                     <span>{{ minutesText }}</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    {% if page.author %}
+                    <span> page.author </span>
+                    {% endif %}
                 </p>
                 <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
                 <p itemprop="description" class="subtitle">{{ page.description }}</p>
@@ -29,7 +33,7 @@
             </article>
 
             {% include share.html %}
-            {% include author.html %}
+            <!-- {% include author.html %} -->
             <!-- {% include comments.html %} -->
             {% include footer.html %}
         </section>
