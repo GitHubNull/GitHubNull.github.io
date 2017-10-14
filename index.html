@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div id="container" class="cols">
+    {% for post in site.posts %}
+    <div class="box" style="background-color:#{{post.color}}">
+       {% if post.img %}
+          <img class="feat-image" src={{ "/images/" | prepend: site.url | append: post.img }} alt="{{post.title}}">
+       {% endif %}
+          <div class="container">
+            <h4>{{post.title}}</h4>
+            <p>{{post.description}}</p>
+             <div class="action">{{ post.date | date: '%Y-%m-%d' }}<a href="{{post.url | prepend: site.url}}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div> 
+        </div>   
+    </div>
+   {% endfor %}
+</div>
