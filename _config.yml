@@ -11,9 +11,12 @@ username: 空
 user_description: 空.
 disqus_username: 空
 
+# favicon.ico
+favicon: favicon.ico
+
 # Social Media
 # Remove the item if you don't need it
-github_username: github_username
+github_username: githubnull
 
 # Build settings
 markdown: kramdown

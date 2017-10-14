@@ -8,6 +8,7 @@
     <h1 class="logo">
         <a href="{{ site.url }}">
             {{ site.username }}
+            {{ site.url | append :"/" | append : site.favicon }} 
         </a>
     </h1>
 </header>
