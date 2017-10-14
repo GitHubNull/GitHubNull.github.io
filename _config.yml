@@ -5,7 +5,7 @@ url: "43all.me"
 permalink: ':title'
 
 markdown: kramdown
-#baseurl: "/"
+baseurl: "/blog"
 
 
 sass:
