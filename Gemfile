@@ -7,4 +7,4 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 gem 'rouge'
 gem 'jekyll'
 gem 'jemoji'
-gem "github-pages", group: :jekyll_plugins
+gem 'github-pages', versions['github-pages']

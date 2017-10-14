@@ -212,7 +212,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
+  github-pages (= 163)
   jekyll
   jemoji
   rouge
