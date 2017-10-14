@@ -33,11 +33,11 @@
     </p>
     <ul>
         {% for link in site.links %}
-          <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a> |
+          <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a> |
         {% endfor %}
-        <a class="feed" href="{{ site.url }}{{site.baseurl}}/feed.xml" title="Atom/RSS feed">订阅</a>
+        <a class="feed" href="{{ site.url }}/feed.xml" title="Atom/RSS feed">订阅</a>
     </ul>
     <p><span>Jekflix</span> was made with <svg class="love"><use xlink:href="#icon-heart"></use></svg> by <a href="http://www.rossener.com" target="_blank" class="creator">Thiago Rossener</a></p>
 </footer>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/main.js" | prepend: site.url }}"></script>
 {% include stats.html %}

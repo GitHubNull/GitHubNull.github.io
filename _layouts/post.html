@@ -22,7 +22,7 @@
                 <p itemprop="description" class="subtitle">{{ page.description }}</p>
 
                 {% if page.image %}
-                    <img src="{{ site.url | append : site.baseurl | append : "/images/" | append : page.image }}" alt="can not find image" class="post-cover">
+                    <img src="{{ site.url | append : "/images/" | append : page.image }}" alt="can not find image" class="post-cover">
                 {% endif %}
 
                 {{ content }}
