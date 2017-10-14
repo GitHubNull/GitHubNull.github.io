@@ -3,7 +3,7 @@
       <h2>菜单</h2>
       <ul>
         {% for link in site.links %}
-          <li><a href="{{ site.url }}/{{ link.url }}">{{ link.title }}</a></li>
+          <li><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
         <li><a class="feed" href="{{ site.url }}/feed.xml" title="Atom/RSS feed">订阅</a></li>
       </ul>
