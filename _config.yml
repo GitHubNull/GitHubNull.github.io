@@ -1,49 +1,38 @@
+# Site Settings
+title: 空
+email: 641570479@qq.com
+description: 空.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site
+google_analytics: "UA-83979019-1"
 
-title: 冷夜暗灯
-desctiption: 夜冷，灯暗。等谁说。
-url: "https://githubnull.github.io"
-permalink: ':title'
+# User Settings
+username: 空
+user_description: 空.
+disqus_username: 空
 
+# Social Media
+# Remove the item if you don't need it
+github_username: github_username
+
+# Build settings
 markdown: kramdown
-#baseurl: "/"
+highlighter: rouge
+permalink: /:title/
 
+# Plugins
+plugins:
+  - jemoji
 
-sass:
-    style: compressed
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: 主页
+    url: /
+  - title: 关于
+    url: /about/
+  - title: 联系
+    url: /contact/
 
-  
-#optimization
-#compress.html
-compress_html:
-  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
-  comments: ["<!-- ", " -->"]
-  endings: [all]
-  ignore:
-    envs: [local]
-  blanklines: false
-  profile: false
-  startings: []
-
-highlight: rouge
-
-
-# Tracker
-analytics: UA-83979019-1
-
-# Comments
-disqus-shortname: webjeda-demo
-
-# Contact form
-# Go to https://getsimpleform.com and get a API token by signing up with your email and enter that here
-api-token:   
-
-include: [_pages]
-version: 0.8
-
-gems: [jekyll-paginate, jekyll-seo-tag]
-
-# favicon.ico
-favicon: favicon.ico
-
-#site logo
-logo:  logo.png
+# Exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
