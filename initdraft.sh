@@ -119,6 +119,7 @@ echo "category: ''"
 echo "tags:"
 echo "twitter_text:"
 echo "introduction:"
+echo "author: "
 echo "---"
 
 }
