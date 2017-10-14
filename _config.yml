@@ -2,7 +2,7 @@
 title: 空
 email: 641570479@qq.com
 description: 空.
-#baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://43all.me" # the base hostname & protocol for your site
 google_analytics: "UA-83979019-1"
 
