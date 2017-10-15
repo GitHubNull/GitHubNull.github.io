@@ -811,6 +811,10 @@ main {
     z-index: 1;
 }
 
+.box-body {
+    border-radius: 4px;
+}
+
 @media only screen and (min-width:37.5rem) {
     .box-item {
         margin: 0 .938rem 1.875rem
