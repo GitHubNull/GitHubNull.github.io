@@ -34,8 +34,7 @@
             <p itemprop="description" class="subtitle">{{ page.description }}</p>
             {% if page.image %}
                 <img src="{{ site.url | append : " /images/ " | append : page.image }}" alt="can not find image" class="post-cover"> 
-            {% endif %} 
-            {{ content }}
+            {% endif %}{{ content }}
         </article>
         <!-- {% include share.html %} -->
         <!-- {% include author.html %} -->
