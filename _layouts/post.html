@@ -11,10 +11,13 @@
             <article role="article" id="post" class="post-content" itemprop="articleBody">
                 <p itemprop="post-info" class="post-info">
                     {% if page.date %}
-                        <i class="fa fa-calendar-o" aria-hidden="true">
-                        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date">
+                        <span>
+                            <i class="fa fa-calendar-o" aria-hidden="true">
+                                {{ page.date }}
                             {% include date.html date=page.date %}
-                        </time>
+                        </span>
+<!--                         <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date">
+                        </time> -->
                     {% endif %}
                     <svg id="clock" class="icon-clock"><use xlink:href="#icon-clock"></use></svg>
                     <span>{{ minutesText }}</span>
