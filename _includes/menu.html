@@ -3,30 +3,38 @@
         <h2>菜单</h2>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <ul>
+            <span>
+				 <li>
+	                <a href="{{ site.url }}">
+	            		<i class="fa fa-home" aria-hidden="true"></i> 主页
+	            	</a>
+	            </li>
+			</span>
 
-            <li>
-                <a href="{{ site.url }}">
-            		<i class="fa fa-home fa-2x" aria-hidden="true"></i>主页
-            	</a>
-            </li>
+			<span>
+				<li>
+	                <a href="{{ site.url }}/about/">
+	            		<i class="fa fa-info" aria-hidden="true"></i> 关于
+	            	</a>
+           		</li>
+			</span>
 
-            <li>
-                <a href="{{ site.url }}/about/">
-            		<i class="fa fa-info fa-2x" aria-hidden="true"></i>关于
-            	</a>
-            </li>
+			<span>
+				<li>
+	                <a href="{{ site.url }}/contact/">
+	            		<i class="fa fa-envelope-o" aria-hidden="true"></i> 联系
+	            	</a>
+           		</li>
+			</span>
 
-            <li>
-                <a href="{{ site.url }}/contact/">
-            		<i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>联系
-            	</a>
-            </li>
+			<span>
+				<li>
+					<a class="feed" href="{{ site.url }}/feed.xml" title="Atom/RSS 订阅">
+						<i class="fa fa-rss" aria-hidden="true"></i> 订阅
+					</a>
+				</li>
+			</span>
 
-            <li>
-                <a class="feed" href="{{ site.url }}/feed.xml" title="Atom/RSS 订阅">
-                	<i class="fa fa-rss fa-2x" aria-hidden="true"></i>订阅
-                </a>
-            </li>
         </ul>
     </nav>
 </aside>
