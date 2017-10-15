@@ -6,12 +6,14 @@ layout: main
     <div id="grid" class="row flex-grid">
     {% for post in site.posts %}
         <article class="box-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-            <span class="category">
-                <a href="{{ site.url }}/categoria/{{ post.category }}">
-                    <span>{{ post.category }}</span>
-                </a>
-            </span>
             <div class="box-body" style="background-color:#{{post.color}}">
+                <div class="box-info" style="background-color:#{{post.color}}">
+                    <span class="category">
+                        <a href="{{ site.url }}/categoria/{{ post.category }}">
+                            <span>{{ post.category }}</span>
+                        </a>
+                    </span>
+                </div>
                 {% if post.image %}
                     <div class="cover">
                         {% include new-post-tag.html date=post.date %}
