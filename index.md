@@ -11,7 +11,7 @@ layout: main
                     <span>{{ post.category }}</span>
                 </a>
             </span>
-            <div class="box-body">
+            <div class="box-body" style="background-color:#{{post.color}}">
                 {% if post.image %}
                     <div class="cover">
                         {% include new-post-tag.html date=post.date %}
