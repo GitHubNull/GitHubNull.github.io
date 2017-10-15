@@ -19,11 +19,14 @@
 <!--                         <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date">
                         </time> -->
                     {% endif %}
-                    <svg id="clock" class="icon-clock"><use xlink:href="#icon-clock"></use></svg>
-                    <span>{{ minutesText }}</span>
+                    <svg id="clock" class="icon-clock">
+                        <use xlink:href="#icon-clock"></use>
+                    </svg>
+                    <span>
+                        {{ minutesText }}
+                    </span>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     {% if page.author %}
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     <span>
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                         {{ page.author}} 
