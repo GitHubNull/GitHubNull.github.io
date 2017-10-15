@@ -10,8 +10,11 @@
             <p itemprop="post-info" class="post-info">
                 {% if page.date %}
                     <span>
-                        <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date"></time>
-                        {% include date.html date=page.date %}
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i> 
+                        {{page.date | date: '%Y-%m-%d'}}&nbsp;&nbsp;&nbsp;&nbsp;
+<!--                         <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="date">
+                        </time> -->
+                        <!-- {% include date.html date=page.date %} -->
                     </span> 
                 {% endif %}
                 <svg id="clock" class="icon-clock">
@@ -30,7 +33,7 @@
             <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
             <p itemprop="description" class="subtitle">{{ page.description }}</p>
             {% if page.image %}
-            <img src="{{ site.url | append : " /images/ " | append : page.image }}" alt="can not find image" class="post-cover"> 
+                <img src="{{ site.url | append : " /images/ " | append : page.image }}" alt="can not find image" class="post-cover"> 
             {% endif %} 
             {{ content }}
         </article>
