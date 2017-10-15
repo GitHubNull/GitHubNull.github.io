@@ -6,4 +6,4 @@
   {% assign totalMinutes = words | divided_by:180 %}
 {% endif %}
 
-{% assign minutesText = totalMinutes | append: '分钟阅读' | preappend: '需要' %}
+{% assign minutesText = totalMinutes | preappend: '需要' | append: '分钟阅读' %}
