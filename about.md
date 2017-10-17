@@ -8,4 +8,4 @@ permalink: /about/
 <img itemprop="image" class="img-rounded" src="{{ site.url  | append : "/images/img00.png" }}" alt="空">
 
 ## 关于
-这是一个关于测试。
+关于人生，关于理想，你还能有什么看法？

