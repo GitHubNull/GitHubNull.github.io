@@ -5,7 +5,8 @@ date: 2017-10-17 11:56:10
 image: 'kali-Linux-Destop.jpg'
 description: 关于学习kali-Linux的笔记
 category: '计算机'
-tags:计算机技术
+tags:
+- 计算机技术
 twitter_text: 关于学习kali-Linux的笔记
 introduction: 关于学习kali-Linux的笔记
 color: '4A3341'
