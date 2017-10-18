@@ -140,3 +140,6 @@ class Metasploit3 < Msf::Exploit::Remote
 
 end
 ```
+
+### linux命令ubuntu 重启网络服务而不需重启
+```sudo /etc/init.d/networking restart```
