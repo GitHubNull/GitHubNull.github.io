@@ -141,3 +141,30 @@ class Metasploit3 < Msf::Exploit::Remote
 
 end
 ```
+### OpenVas安装
+
+```shell
+sudo apt-get install openvas
+sudo openvas-setup
+```
+
+安装过程中，会被询问关于redis的问题，选择默认选项来以Unix套接字运行。
+
+即使是有快速的网络连接，openvas-setup 仍需要很长时间来下载和更新所有所需的 CVE、SCAP 定义。
+
+请注意 openvas-setup 的命令输出，密码会在安装过程中生成，并在安装的最后在控制台中打印出来。
+
+验证 openvas 正在运行:
+
+`netstat -tulpn`
+
+在 Kali 中启动 OpenVAS：
+
+`openvas-start`
+
+安装后，你应该可以通过 `https://127.0.0.1:9392` 访问 OpenVAS 的 web 程序了。
+
+接受自签名证书，并使用 openvas-setup 输出的 admin 凭证和密码登录程序。
+
+接受自签名证书后，你应该可以看到登录界面了。
+
