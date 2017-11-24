@@ -19,7 +19,7 @@ Systemd是一种新的linux系统服务管理器。它替换了init系统，能�
 
 #### 切换至字符界面
 ```shell
-  sudo systemctl set-default multi-user.target
+systemctl set-default multi-user.target
 ```
 
 #### 切换至图形界面
