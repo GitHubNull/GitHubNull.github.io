@@ -1546,7 +1546,7 @@ pre {
 }
 
 pre code {
-    width: auto;
+    width: 80%;
     max-width: 50rem;
     float: none;
     display: block;
