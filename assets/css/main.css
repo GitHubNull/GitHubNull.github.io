@@ -1527,8 +1527,8 @@ pre {
     font-family: monospace, monospace;
     font-size: 1em
     background: #222;
-    left:10%;
-    right: 10%;
+    /*left:10%;*/
+    /*right: 10%;*/
     width: auto;
     padding: 1.25rem 0;
     color: #fff;
