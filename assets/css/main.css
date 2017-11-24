@@ -1545,8 +1545,8 @@ pre {
     }
 }
 
-pre code {
-    /*width: auto;*/
+/*pre code {
+    width: auto;
     max-width: 50rem;
     float: none;
     display: block;
@@ -1555,7 +1555,7 @@ pre code {
     padding-left: 0;
     padding-right: 0;
     padding: 0 1.25rem;
-}
+}*/
 
 pre code::after {
     content: '';
