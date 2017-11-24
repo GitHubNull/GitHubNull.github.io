@@ -18,11 +18,17 @@ author: 夜雨
 Systemd是一种新的linux系统服务管理器。它替换了init系统，能够管理系统的启动过程和一些系统服务，一旦启动起来，就将监管整个系统。
 
 - 切换至字符界面
-  ```sudo systemctl set-default multi-user.target```
+```shell
+  sudo systemctl set-default multi-user.target
+```
 - 切换至图形界面
-  ```sudo systemctlset-default graphical.target```
+```shell
+sudo systemctlset-default graphical.target
+```
 - 打开图形界面
-  ```sudo init 5```
+```shell
+sudo init 5
+```
 ### Metasploit
 #### usermap_script 漏洞相关笔记
 - usermap_script：CVE-2007-2447
@@ -155,11 +161,15 @@ sudo openvas-setup
 
 验证 openvas 正在运行:
 
-`netstat -tulpn`
+```shell
+netstat -tulpn
+```
 
 在 Kali 中启动 OpenVAS：
 
-`openvas-start`
+```shell
+openvas-start
+```
 
 安装后，你应该可以通过 `https://127.0.0.1:9392` 访问 OpenVAS 的 web 程序了。
 
@@ -168,7 +178,9 @@ sudo openvas-setup
 接受自签名证书后，你应该可以看到登录界面了。
 
 ### linux命令之ubuntu 重启网络服务而不需重启
-```sudo /etc/init.d/networking restart```
+```shell
+sudo /etc/init.d/networking restart
+```
 
 ## sqlmap学习笔记
 
