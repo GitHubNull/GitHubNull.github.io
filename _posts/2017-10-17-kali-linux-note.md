@@ -17,18 +17,21 @@ author: 夜雨
 
 Systemd是一种新的linux系统服务管理器。它替换了init系统，能够管理系统的启动过程和一些系统服务，一旦启动起来，就将监管整个系统。
 
-- 切换至字符界面
+#### 切换至字符界面
 ```shell
   sudo systemctl set-default multi-user.target
 ```
-- 切换至图形界面
+
+#### 切换至图形界面
 ```shell
 sudo systemctlset-default graphical.target
 ```
-- 打开图形界面
+
+#### 打开图形界面
 ```shell
 sudo init 5
 ```
+
 ### Metasploit
 #### usermap_script 漏洞相关笔记
 - usermap_script：CVE-2007-2447
