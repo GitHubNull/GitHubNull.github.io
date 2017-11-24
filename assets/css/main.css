@@ -40,11 +40,6 @@ hr {
     overflow: visible
 }
 
-pre {
-    font-family: monospace, monospace;
-    font-size: 1em
-}
-
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
@@ -1529,6 +1524,8 @@ article .share {
 }
 
 pre {
+    font-family: monospace, monospace;
+    font-size: 1em
     background: #222;
     width: auto;
     padding: 1.25rem 0;
@@ -1538,14 +1535,14 @@ pre {
 }
 
 @media only screen and (min-width:37.5rem) {
-/*    pre {
+    pre {
         font-size: 1rem;
         padding: 2.5rem 0;
         margin: 3.125rem 0
-    }*/
+    }
 }
 
-pre code {
+.post-content pre code {
     width: auto;
     max-width: 50rem;
     float: none;
