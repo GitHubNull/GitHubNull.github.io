@@ -1531,6 +1531,8 @@ article .share {
 pre {
     background: #222;
     width: 100%;
+    left: 10%;
+    right: 10%;
     padding: 1.25rem 0;
     color: #fff;
     margin: 1.875rem 0;
