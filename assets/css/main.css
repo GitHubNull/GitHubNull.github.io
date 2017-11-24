@@ -1528,14 +1528,14 @@ article .share {
     fill: #d34836
 }
 
-pre {
+/*pre {
     background: #222;
     width: auto;
     padding: 1.25rem 0;
     color: #fff;
     margin: 1.875rem 0;
     font-size: .875rem;
-}
+}*/
 
 @media only screen and (min-width:37.5rem) {
     pre {
