@@ -1550,7 +1550,7 @@ pre code {
     max-width: 50rem;
     float: none;
     display: block;
-    /*margin-right: auto;*/
+    margin-right: auto;
     margin-left: auto;
     padding-left: auto;
     padding-right: auto;
