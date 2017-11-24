@@ -1530,7 +1530,7 @@ article .share {
 
 pre {
     background: #222;
-    width: 100%;
+    /*width: 100%;*/
     left: 10%;
     right: 10%;
     padding: 1.25rem 0;
@@ -1552,11 +1552,11 @@ pre code {
     max-width: 50rem;
     float: none;
     display: block;
-/*    margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
     padding-left: 0;
     padding-right: 0;
-    padding: 0 1.25rem;*/
+    padding: 0 1.25rem;
 }
 
 pre code::after {
