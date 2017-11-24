@@ -1535,6 +1535,8 @@ pre {
     color: #fff;
     /*margin: 1.875rem 0;*/
     font-size: .875rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (min-width:37.5rem) {
@@ -1550,8 +1552,8 @@ pre code {
     max-width: 50rem;
     float: none;
     display: block;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     padding-left: auto;
     padding-right: auto;
     padding: 0 1.25rem;
