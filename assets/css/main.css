@@ -1287,10 +1287,10 @@ main {
     padding: .313rem
 }
 
-.post-content td/*>pre*/ {
+/*.post-content td>pre {
     padding: 0;
     margin: 0
-}
+}*/
 
 .post-content td.gutter.gl {
     padding-right: 1.563rem;
@@ -1527,6 +1527,8 @@ pre {
     font-family: monospace, monospace;
     font-size: 1em
     background: #222;
+    left:10%;
+    right: 10%;
     width: auto;
     padding: 1.25rem 0;
     color: #fff;
