@@ -1556,7 +1556,8 @@ pre code {
     margin-left: auto;
     padding-left: 0;
     padding-right: 0;
-    padding: 0 1.25rem;
+    padding: 1.25rem 1.25rem;
+    overflow-x: scroll
 }
 
 pre code::after {
@@ -1565,11 +1566,11 @@ pre code::after {
     clear: both
 }
 
-@media only screen and (max-width:37.5rem) {
+/*@media only screen and (max-width:37.5rem) {
     pre code {
         overflow-x: scroll
     }
-}
+}*/
 
 pre span {
     line-height: 1.5rem;
