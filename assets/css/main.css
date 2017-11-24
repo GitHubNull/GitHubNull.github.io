@@ -1997,3 +1997,5 @@ footer ul a:hover {
 .main-page footer p {
     color: #fff
 }
+
+@import "syntax";
