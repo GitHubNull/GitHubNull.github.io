@@ -19,14 +19,15 @@ favicon: favicon.ico
 github_username: githubnull
 
 # Build settings
+highlighter: pygments
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
+input: GFM  # 没有这个配置 代码块不会生效
 
 # Plugins
 plugins:
   - jemoji
-  - highlight
 
 # Links to include in menu navigation
 # For external links add external: true
