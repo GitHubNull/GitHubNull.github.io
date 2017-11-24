@@ -633,6 +633,7 @@ aside nav li a:hover {
 html,
 body {
     height: 100%
+    width:85%;
 }
 
 .bar-header {
@@ -1531,12 +1532,10 @@ article .share {
 pre {
     background: #222;
     width: 100%;
-    /*padding: 1.25rem 0;*/
+    padding: 1.25rem 0;
     color: #fff;
-    /*margin: 1.875rem 0;*/
+    margin: 1.875rem 0;
     font-size: .875rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @media only screen and (min-width:37.5rem) {
@@ -1552,10 +1551,10 @@ pre code {
     max-width: 50rem;
     float: none;
     display: block;
-    margin-left: auto;
     margin-right: auto;
-    padding-left: auto;
-    padding-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
     padding: 0 1.25rem;
 }
 
