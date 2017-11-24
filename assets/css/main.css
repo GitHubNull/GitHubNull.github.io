@@ -1546,7 +1546,7 @@ pre {
 }
 
 pre code {
-    width: 80%;
+    /*width: auto;*/
     max-width: 50rem;
     float: none;
     display: block;
@@ -1555,7 +1555,6 @@ pre code {
     padding-left: 0;
     padding-right: 0;
     padding: 0 1.25rem;
-    border-radius: 3px;
 }
 
 pre code::after {
