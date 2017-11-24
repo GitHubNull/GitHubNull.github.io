@@ -1558,6 +1558,7 @@ pre code {
     padding-right: 0;
     padding: 1.25rem 1.25rem;
     overflow-x: scroll
+    border-radius: 3px;
 }
 
 pre code::after {
