@@ -1533,7 +1533,7 @@ pre {
     width: 100%;
     /*padding: 1.25rem 0;*/
     color: #fff;
-    margin: 1.875rem 0;
+    /*margin: 1.875rem 0;*/
     font-size: .875rem;
 }
 
@@ -1551,9 +1551,9 @@ pre code {
     float: none;
     display: block;
     /*margin-right: auto;*/
-    /*margin-left: auto;*/
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: auto;
+    padding-left: auto;
+    padding-right: auto;
     padding: 0 1.25rem;
 }
 
