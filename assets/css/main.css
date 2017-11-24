@@ -1552,8 +1552,8 @@ pre code {
     display: block;
     /*margin-right: auto;*/
     /*margin-left: auto;*/
-/*    padding-left: 0;
-    padding-right: 0;*/
+    padding-left: 0;
+    padding-right: 0;
     padding: 0 1.25rem;
 }
 
