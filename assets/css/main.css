@@ -1557,7 +1557,7 @@ pre code {
     padding-left: 0;
     padding-right: 0;
     padding: 1.25rem 1.25rem;
-    overflow-x: scroll
+    overflow-x: scroll;
     border-radius: 3px;
 }
 
