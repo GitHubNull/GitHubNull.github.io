@@ -40,6 +40,11 @@ hr {
     overflow: visible
 }
 
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
@@ -1287,10 +1292,10 @@ main {
     padding: .313rem
 }
 
-/*.post-content td>pre {
+.post-content td>pre {
     padding: 0;
     margin: 0
-}*/
+}
 
 .post-content td.gutter.gl {
     padding-right: 1.563rem;
@@ -1524,12 +1529,8 @@ article .share {
 }
 
 pre {
-    font-family: monospace, monospace;
-    font-size: 1em
     background: #222;
-    /*left:10%;*/
-    /*right: 10%;*/
-    width: auto;
+    width: 100%;
     padding: 1.25rem 0;
     color: #fff;
     margin: 1.875rem 0;
@@ -1551,9 +1552,9 @@ pre code {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    padding-left: auto;
-    padding-right: auto;
-    padding: auto/*0 1.25rem*/;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0 1.25rem;
 }
 
 pre code::after {
