@@ -40,9 +40,13 @@ sudo init 5
 
 google默认搜索模式为模糊搜索，并且可能会把长句或长短语拆分成更小的词进行搜索。
 
+示例：这是一个测试
+
 ![默认模式测试截图1]({{site.url}}/images/google-hack-test01.jpg)  ![默认模式测试截图2]({{site.url}}/images/google-hack-test01-01.jpg)
 
 ### 短语精确搜索
+
+示例："这是一个测试"
 
 对搜索短语加上英文双引号进行精确搜索模式搜索，不再对短语进行拆分。
 
@@ -50,11 +54,15 @@ google默认搜索模式为模糊搜索，并且可能会把长句或长短语�
 
 ### 通配符
 
+示例："这*个测试"
+
 通配符是指星号“*”。该选项必须在使用精确搜索引号内部使用。
 
 ![通配符测试截图]({{site.url}}/images/google-hack-test03.jpg)
 
 ### 点号匹配
+
+示例："这.一个测试"
 
 点号是指”.“，就是英文当中的句号。匹配的是单个字符，不是字词短语等内容。需要注意的是这个选项也需要在使用精确匹配的双引号当中使用。
 
@@ -66,6 +74,10 @@ google默认搜索模式为模糊搜索，并且可能会把长句或长短语�
 
 #### 逻辑与
 
+示例1："这是一个" "测试"
+
+示例2："这是一个" and "测试"
+
 ![逻辑与测试截图1]({{site.url}}/images/google-hack-test05.jpg)
 
 ![逻辑与测试截图2]({{site.url}}/images/google-hack-test05-01.jpg)
@@ -74,9 +86,107 @@ google默认搜索模式为模糊搜索，并且可能会把长句或长短语�
 
 逻辑或和逻辑与类似。但是，逻辑或使用的是符号”|“。并且逻辑或的结果只要包含其中之一就行。
 
-![逻辑或测试截图1]({{site.url}}/images/google-hack-test06.jpg)
+示例："这是一个" | "测试"
 
-### Metasploit
+![逻辑或测试截图]({{site.url}}/images/google-hack-test06.jpg)
+
+#### 逻辑非
+
+示例："这是一个" -"测试"
+
+![逻辑非测试截图]({{site.url}}/images/google-hack-test07.jpg)
+
+### 条件约束
+
+示例："这是一个测试" + "测试"
+
+可以使用加号”+“进行条件约束搜索。加在加号后面的内容必须包含在搜索结果中。一般与精确搜索配合使用。
+
+![条件约束测试截图]({{site.url}}/images/google-hack-test08.jpg)
+
+### 数字范围
+
+示例："这是一个测试" 2016..2017年
+
+”..“两个点表示一个数字范围。应用于日期、货币、尺寸、重量、高度等单位范围搜索。用作范围界定时最好给定单位。否则搜索结果可能是无用的数据。
+
+![数值范围测试截图]({{site.url}}/images/google-hack-test09.jpg)
+
+### 括号分组
+
+括号”()“是分组符号，主要是为了避免逻辑混乱。
+
+示例：()"这是一个") | ("测试")
+
+![括号分组测试截图]({{site.url}}/images/google-hack-test10.jpg)
+
+### 标题搜索
+
+示例：intitle:"这是一个测试"
+
+![标题搜索测试截图]({{site.url}}/images/google-hack-test11.jpg)
+
+### 正文搜索
+
+示例：intext:"这是一个测试"
+
+![正文搜索测试截图]({{site.url}}/images/google-hack-test12.jpg)
+
+### 网址中搜索
+
+示例：inurl:this is a test
+
+![网址中搜索测试截图]({{site.url}}/images/google-hack-test13.jpg)
+
+### 锚链链接搜索
+
+示例：inanchor:"这是一个测试"
+
+![锚链链接搜索测试截图]({{site.url}}/images/google-hack-test14.jpg)
+
+### 文档类型搜索
+
+示例：filetype:sql
+
+![文档类型搜索测试截图]({{site.url}}/images/google-hack-test15.jpg)
+
+### 缓存搜索（快照搜索）
+
+示例：cache:43all.me
+
+![缓存搜索测试截图]({{site.url}}/images/google-hack-test16.jpg)
+
+### 相关网站搜索
+
+示例：ralated:www.kali.org
+
+![相关网站搜索测试截图]({{site.url}}/images/google-hack-test17.jpg)
+
+### 链接搜索
+
+示例：link:www.kali.org
+
+![链接搜索测试截图]({{site.url}}/images/google-hack-test18.jpg)
+
+### 网站搜索
+
+示例：site:www.kali.org
+
+![网站搜索测试截图]({{site.url}}/images/google-hack-test19.jpg)
+
+### 混合搜索
+
+示例：inurl:.php? intext:CHARACTER_SETS,COLLATIONS, ?intitle:phpmyadmin
+
+![混合搜索测试截图1]({{site.url}}/images/google-hack-test20.jpg)
+
+点开一个网站之后的截图如下：
+
+![混合搜索测试截图2]({{site.url}}/images/google-hack-test21.jpg)
+
+
+
+## Metasploit
 
 #### usermap_script 漏洞相关笔记
 - usermap_script：CVE-2007-2447
