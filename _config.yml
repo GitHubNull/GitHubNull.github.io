@@ -6,7 +6,8 @@ description: 空.
 url: "http://43all.me" # the base hostname & protocol for your site
 google_analytics: "UA-83979019-1"
 
-images:"http://43all.me/images"
+images: "http://43all.me/images"
+
 # User Settings
 username: 空
 user_description: 空.
