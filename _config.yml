@@ -6,6 +6,8 @@ description: 空.
 url: "http://43all.me" # the base hostname & protocol for your site
 google_analytics: "UA-83979019-1"
 
+images: "http://43all.me/images"
+
 # User Settings
 username: 空
 user_description: 空.
@@ -19,9 +21,11 @@ favicon: favicon.ico
 github_username: githubnull
 
 # Build settings
+highlighter: pygments
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
+input: GFM  # 没有这个配置 代码块不会生效
 
 # Plugins
 plugins:
