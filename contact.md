@@ -4,7 +4,7 @@ title: 联系
 description: 聊聊吧。
 permalink: /contact/
 ---
-
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css" media="screen">
   .container {
     margin: 0px auto;
