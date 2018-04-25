@@ -374,5 +374,5 @@ lm test # aircrack-ng hacku-01.cap -w ./rockyou.txt
 ```
 
 ### 参考文献
-> (wifi-cracking)[https://github.com/brannondorsey/wifi-cracking]
-> (aircrack-ng无线网WIFI破解教程(下) – WIFI破解实战)[http://www.vuln.cn/2683]
+> [wifi-cracking](https://github.com/brannondorsey/wifi-cracking)
+> [aircrack-ng无线网WIFI破解教程(下) – WIFI破解实战](http://www.vuln.cn/2683)
