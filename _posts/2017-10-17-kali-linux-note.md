@@ -371,7 +371,8 @@ lm test # aircrack-ng hacku-01.cap -w ./rockyou.txt
                        71 1A 3C 4E 8D D8 50 9A 9D 68 BE DF 3D 86 07 2A 
 
       EAPOL HMAC     : 4C D6 17 43 FF E3 7E F8 CD 43 A2 91 3E A8 2A E0 
-      ```
-      ### 参考文献
-      > (wifi-cracking)[https://github.com/brannondorsey/wifi-cracking]
-      > (aircrack-ng无线网WIFI破解教程(下) – WIFI破解实战)[http://www.vuln.cn/2683]
+```
+
+### 参考文献
+> (wifi-cracking)[https://github.com/brannondorsey/wifi-cracking]
+> (aircrack-ng无线网WIFI破解教程(下) – WIFI破解实战)[http://www.vuln.cn/2683]
