@@ -1,1 +1,5 @@
 *.css linguist-language=jekyll
+*.styl linguist-language=jekyll
+*.js linguist-language=jekyll
+*.md linguist-language=jekyll
+*.html linguist-language=jekyll
